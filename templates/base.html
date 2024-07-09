@@ -1,0 +1,67 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amare <3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- Botão para abrir sidebar -->
+        <button class="openbtn" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-sticky">
+                <!-- Header do sidebar com logo e botão "X" -->
+                <div class="sidebar-header">
+                    <img src="https://raw.githubusercontent.com/Sidneytitan/Amare/main/Amare_greens-removebg-preview.png" alt="Logo da Empresa">
+                    <button class="sidebar-close-btn" id="sidebarClose"><i class="fas fa-times"></i></button>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a href="{{ url_for('index') }}" class="text-white">
+                            <i class="fa fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="clientes#" class="text-white">
+                            <i class="fa fa-users"></i> Clientes
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-white">
+                            <i class="fa fa-cube"></i> Estoque
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-white">
+                            <i class="fa fa-chart-bar"></i> Análise
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Conteúdo principal -->
+        <div class="main-content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script> <!-- Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap JS -->
+    <script src="{{ url_for('static', filename='base.js') }}"></script> <!-- Seu arquivo JavaScript personalizado -->
+
+</body>
+</html>
+

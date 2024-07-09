@@ -1,0 +1,15 @@
+/* Estilos personalizados para controlar a posição dos elementos */
+
+.container-custom {
+    margin-top: 50px; /* Margem superior para empurrar o conteúdo para baixo */
+    padding: 20px; /* Espaçamento interno para o conteúdo dentro do container */
+}
+
+.table-custom {
+    margin-top: 20px; /* Margem superior para a tabela */
+}
+
+.btn-action {
+    margin-right: 5px; /* Espaçamento entre botões */
+}
+

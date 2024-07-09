@@ -1,0 +1,91 @@
+/* static/css/styles.css */
+
+/* Estilos adicionais personalizados */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+
+.wrapper {
+    display: flex;
+    width: 100%;f
+}
+.sidebar {
+    width: 250px;
+    background-color: #19311C; /* Cor de fundo cinza escuro */
+    color: #082912;
+    height: 100vh; /* Altura total da viewport */
+    position: fixed;
+    left: -250px; /* Inicia fechado */
+    top: 0;
+    overflow-y: auto; /* Scroll caso haja muitos itens */
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: left 0.3s ease; /* Transição suave */
+    z-index: 1000; /* Garante que o sidebar esteja sobreposto */
+}
+.sidebar.show {
+    left: 0; /* Mostra o sidebar */
+}
+.sidebar .list-group-item {
+    background-color:#19311C; /* Cor de fundo cinza escuro */
+    border-color: #343a40;
+    color: #082912;
+    transition: background-color 0.3s ease;
+}
+.sidebar .list-group-item:hover {
+    background-color: #3D3B3A; /* Cor de fundo amarelo ao passar o mouse */
+    color: #082912; /* Cor do texto ao passar o mouse */
+}
+.main-content {
+    margin-left: 0; /* Largura inicial da sidebar */
+    padding: 20px;
+    transition: margin-left 0.3s ease; /* Transição suave ao expandir */
+}
+.main-content h2 {
+    margin-top: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.sidebar-header img {
+    max-width: 90%; /* Ajuste conforme necessário */
+    height: auto;
+}
+.sidebar-close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* Estilo para o botão que abre o sidebar */
+/* Estilo para o botão que abre o sidebar */
+.openbtn {
+    background-color: #19311C; /* Cor verde mais brilhante */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50px; /* Largura fixa em pixels */
+    height: 50px; /* Altura fixa em pixels */
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    border-radius: 50%; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: background-color 0.3s;
+}
+
+
+
+
+
+
